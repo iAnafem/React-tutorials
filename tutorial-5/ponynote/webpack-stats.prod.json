@@ -1,0 +1,23 @@
+{
+  "status": "done",
+  "publicPath": "/static/bundles/",
+  "chunks": {
+    "main": [
+      {
+        "name": "css/main.1a8d6906.css",
+        "publicPath": "/static/bundles/css/main.1a8d6906.css",
+        "path": "/home/mks/tutorial_projects/drf-react-tutorials/tutorial-5/ponynote/assets/bundles/css/main.1a8d6906.css"
+      },
+      {
+        "name": "js/main.b206aa7a.js",
+        "publicPath": "/static/bundles/js/main.b206aa7a.js",
+        "path": "/home/mks/tutorial_projects/drf-react-tutorials/tutorial-5/ponynote/assets/bundles/js/main.b206aa7a.js"
+      },
+      {
+        "name": "js/main.b206aa7a.js.map",
+        "publicPath": "/static/bundles/js/main.b206aa7a.js.map",
+        "path": "/home/mks/tutorial_projects/drf-react-tutorials/tutorial-5/ponynote/assets/bundles/js/main.b206aa7a.js.map"
+      }
+    ]
+  }
+}
