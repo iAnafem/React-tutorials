@@ -1,14 +1,20 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {connect} from "react-redux";
 
 import {Link, Redirect} from "react-router-dom";
-import {auth} from "../actions"
+
+import {auth} from "../actions";
 
 class Login extends Component {
 
+  state = {
+    username: "",
+    password: "",
+  };
+
   onSubmit = e => {
     e.preventDefault();
-    this.props.login(this.state.username, this.state.password);
+    this.props.register(this.state.username, this.state.password);
   };
 
   render() {
@@ -18,7 +24,7 @@ class Login extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <fieldset>
-          <legend>Login</legend>
+          <legend>Register</legend>
           {this.props.errors.length > 0 && (
             <ul>
               {this.props.errors.map(error => (
@@ -39,17 +45,16 @@ class Login extends Component {
               onChange={e => this.setState({password: e.target.value})} />
           </p>
           <p>
-            <button type="submit">Login</button>
+            <button type="submit">Register</button>
           </p>
 
           <p>
-            Don't have an account? <Link to="/register">Register</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </p>
         </fieldset>
       </form>
     )
   }
-
 }
 
 const mapStateToProps = state => {
@@ -67,9 +72,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: (username, password) => {
-      return dispatch(auth.login(username, password));
-    }
+    register: (username, password) => dispatch(auth.register(username, password)),
   };
 };
 
